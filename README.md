@@ -31,6 +31,52 @@ For more detailed documentation, check out the [Notion page](https://panoramic-m
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+## Bonus points implemented
+
+Run the program from task 1 for between 1 and 30 chargepoints. How does the
+concurrency factor behave?
+
+```javascript
+// Function for analyzing the concurrency factor for 1 to 30 chargepoints
+function analyzeConcurrencyFactor() {
+    const results = [];
+
+    for (let chargepoints = 1; chargepoints <= 30; chargepoints++) {
+        const simulation = new EVChargingSimulation(chargepoints, 11, 35040, 18);
+        simulation.runSimulation();
+        const result = simulation.calculateResults();
+        results.push({
+            chargepoints,
+            ...result,
+        });
+    }
+
+    return results;
+}
+
+const concurrencyResults = analyzeConcurrencyFactor();
+
+//To see the results run `npm run task1`
+console.table(concurrencyResults);
+```
+
+The deviation of the concurrency factor from the bonus task could be displayed
+
+```javascript
+const runConcurrencyAnalysis = () => {
+    return Array.from({ length: params.chargePoints }, (_, i) => {
+        const cp = i + 1;
+        const concurrencyFactor = Math.random() * 100;
+        return {
+            chargepoints: cp,
+            concurrencyFactor,
+            deviation:
+                concurrencyFactor < 35 ? concurrencyFactor - 35 : concurrencyFactor > 55 ? concurrencyFactor - 55 : 0,
+        };
+    });
+};
+```
+
 ## Code structure
 
 The code is organized as follows:

@@ -4,9 +4,13 @@
 
 Shop owner has noticed an increasing number of EVs parking at his store and wants to install charging stations to attract more customers and support sustainability efforts.
 
+For more detailed documentation, check out the [Notion page](https://panoramic-magic-bfd.notion.site/The-electric-charge-simulator-React-Typescript-Tailwind-198d3f93fc72808ebf2cd1fd5676b6d8?pvs=4)
+
 ## Getting Started
 
-### How to run execute the task 1
+[Website link](https://ev-charge-simulator.vercel.app/)
+
+### How to execute task 1 (Logic)
 
 ```js
     npm run task1

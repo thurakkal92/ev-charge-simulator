@@ -40,13 +40,6 @@ type Result = {
     concurrencyDeviation: ConcurrencyAnalysisItem[];
 };
 
-interface SimulationResult {
-    timeSlots?: { time: string; power: number }[];
-    totalEnergy?: number;
-    peakPower?: number;
-    charginStations?: number;
-}
-
 interface SimulationContextType {
     params: SimulationState;
     setParams: React.Dispatch<React.SetStateAction<SimulationState>>;
@@ -54,4 +47,4 @@ interface SimulationContextType {
     setResults: React.Dispatch<React.SetStateAction<Result>>;
 }
 
-export type { SimulationContextType, SimulationResult, SimulationState, Result };
+export type { SimulationContextType, SimulationState, Result };

@@ -18,7 +18,7 @@ function SimilationOutput() {
             <h2 className="py-4 px-6 w-100p text-xl font-semibold">Visualization</h2>
             <div className="bg-neutral-100 mx-4 p-6">
                 <KeyInsightsView />
-                <div className="grid rounded-md grid-cols-2 gap-x-6 gap-y-6 flex-wrap flex-1">
+                <div className="grid rounded-md grid-cols-2 sm:grid-cols-1 md-grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 flex-wrap flex-1">
                     <ChargingValuesView />
                     <CharginEventsView />
                     <ConcurrencyFactorView />

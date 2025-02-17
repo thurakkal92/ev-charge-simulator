@@ -24,7 +24,7 @@ const VARIANT_CLASS = {
 function KeyInsightCard(props: IProps) {
     const { variant, label, value, helperText } = props;
     return (
-        <div className="border border-neutral-100 shadow-md flex-col flex p-6 rounded-md bg-white">
+        <div className="border flex-1 mb-6 border-neutral-100 shadow-md flex-col flex p-6 rounded-md bg-white">
             <div className={`${VARIANT_CLASS[variant]} rounded-full border-4 flex items-center justify-center w-9 h-9`}>
                 <Icon icon="trendUp" className="h-5 w-5 stroke-inherit" />
             </div>

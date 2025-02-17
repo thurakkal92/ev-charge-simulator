@@ -5,7 +5,7 @@ import { useSimulation } from '@/context/SimulationContext';
 function KeyInsightsView() {
     const { results } = useSimulation();
     return (
-        <div className="grid grid-cols-4 gap-x-6 pb-6">
+        <div className="flex flex-wrap gap-x-6">
             <KeyInsightCard
                 variant="success"
                 label="Total Energy Charged"

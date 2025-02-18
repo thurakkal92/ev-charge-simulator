@@ -10,11 +10,11 @@ import { useSimulation } from '@/context/SimulationContext';
 import { useSimulationHandler } from '@/hooks/useSimulationHandler';
 
 function SimulationSettings() {
-    const { params, setParams } = useSimulation();
+    const { params, setParams, loading } = useSimulation();
     const { runSimulation } = useSimulationHandler();
 
     return (
-        <div className="rounded-md bg-neutral-50 px-6 py-4 border-b sticky top-0 z-20 border-neutral-200">
+        <div className="rounded-md bg-neutral-50 px-6 py-4 border-b static md:sticky top-0 z-20 border-neutral-200">
             <h2 className="text-2xl font-semibold">Simulation settings</h2>
             <div className="py-6 flex items-start flex-wrap gap-x-12 gap-y-10">
                 <div>
@@ -82,7 +82,7 @@ function SimulationSettings() {
                 </div>
                 <div className="flex flex-1 justify-end items-center self-end">
                     <Button onClick={runSimulation} startIcon={<Icon icon="sparkles" />}>
-                        Run simulation
+                        {loading ? 'Loading...' : 'Run simulation'}
                     </Button>
                 </div>
             </div>

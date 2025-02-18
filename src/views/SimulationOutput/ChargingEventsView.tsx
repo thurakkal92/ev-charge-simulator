@@ -30,7 +30,7 @@ function CharginEventsView() {
 
     return (
         <div className="shadow-sm border border-neutral-200 rounded-md bg-white p-4 min-h-80 ">
-            <div className="flex gap-2 mb-4 justify-between items-start">
+            <div className="flex gap-2 mb-4 justify-between flex-wrap items-start">
                 <h4 className="text-neutral-900 font-semibold">Number of Charging events</h4>
 
                 <ToggleButtonGroup value={filter} onChange={filterHandler}>

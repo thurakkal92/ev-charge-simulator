@@ -3,9 +3,10 @@ import { Result } from '@/types/simulation';
 import { generateChargingEvents, generateExemplaryDay, generateRandomFactor } from '@/utils';
 
 export function useSimulationHandler() {
-    const { params, setResults } = useSimulation();
+    const { params, setResults, setLoading } = useSimulation();
 
     const runSimulation = () => {
+        setLoading(true); //button loading state
         const chargingValue = Array.from({ length: params.chargePoints }, (_, i) => ({
             station: i + 1,
             power: Math.floor(generateRandomFactor(params.chargingPower - Math.random() * 3)),
@@ -30,6 +31,8 @@ export function useSimulationHandler() {
             noOfChargingEvents,
             concurrencyDeviation,
         });
+
+        setTimeout(() => setLoading(false), 500);
     };
 
     const runConcurrencyAnalysis = () => {

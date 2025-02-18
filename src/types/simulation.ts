@@ -45,6 +45,8 @@ interface SimulationContextType {
     setParams: React.Dispatch<React.SetStateAction<SimulationState>>;
     results: Result;
     setResults: React.Dispatch<React.SetStateAction<Result>>;
+    loading: boolean;
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export type { SimulationContextType, SimulationState, Result };

@@ -14,9 +14,10 @@ export function SimulationProvider({ children }: { children: React.ReactNode }) 
     });
 
     const [results, setResults] = useState<Result>({} as Result);
+    const [loading, setLoading] = useState<boolean>(false);
 
     return (
-        <SimulationContext.Provider value={{ params, setParams, results, setResults }}>
+        <SimulationContext.Provider value={{ params, setParams, results, setResults, loading, setLoading }}>
             {children}
         </SimulationContext.Provider>
     );
